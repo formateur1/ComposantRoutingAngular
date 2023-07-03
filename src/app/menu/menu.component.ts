@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  constructor(private router:Router) {
+  }
+
+  news()
+  {
+    this.router.navigate(["news"]);
+  }
 }
