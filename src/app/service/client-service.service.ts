@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Client } from '../model/client.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
@@ -42,4 +42,13 @@ export class ClientServiceService {
   {
     return this.http.put<boolean>("http://localhost:8080/modifierClient", client);
   }
+
+  // getAllCoinsListing() {
+  //   const httpOptions = {
+  //     headers: new HttpHeaders({
+  //       'X-CMC_PRO_API_KEY':  '1b305f9a-fb09-4338-8d7e-277d20a74667'
+  //     })
+  //   };
+  //   return this.http.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest", httpOptions);
+  //   }
 }

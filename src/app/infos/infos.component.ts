@@ -19,6 +19,8 @@ export class InfosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listeC$ = this.cs.getListeClient();
+
+    // this.cs.getAllCoinsListing().subscribe(data => {console.log(data)});
   }
 
   delete(id:number)
