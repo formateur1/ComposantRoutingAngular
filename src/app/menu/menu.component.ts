@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRoute, Router, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +8,8 @@ import { Router, RouterStateSnapshot } from '@angular/router';
 })
 export class MenuComponent {
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private ar:ActivatedRoute) {
+    console.log("url : " + ar.snapshot)
   }
 
   news()

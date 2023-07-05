@@ -9,6 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { InfosComponent } from './infos/infos.component';
 import { RechercheComponent } from './recherche/recherche.component';
 import { NewsComponent } from './news/news.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormulaireClientComponent } from './formulaire-client/formulaire-client.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpdateClientComponent } from './update-client/update-client.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { NewsComponent } from './news/news.component';
     FooterComponent,
     InfosComponent,
     RechercheComponent,
-    NewsComponent
+    NewsComponent,
+    FormulaireClientComponent,
+    UpdateClientComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

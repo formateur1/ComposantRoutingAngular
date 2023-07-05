@@ -1,7 +1,11 @@
 <p>infos</p>
 
 <ul>
-    <li *ngFor="let c of listeC">{{c.id}} - {{c.nom}} - {{c.prenom}}</li>
+    <li *ngFor="let c of listeC$ | async">
+        {{c.id}} - {{c.nom}} - {{c.prenom}}
+        <button (click)="delete(c.id)">Delete</button>
+        <button (click)="update(c.id)">Update</button>
+    </li>
 </ul>
 
 <router-outlet></router-outlet>

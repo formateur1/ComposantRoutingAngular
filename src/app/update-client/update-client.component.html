@@ -1,0 +1,12 @@
+<div *ngIf="clientForm">
+<form [formGroup]="clientForm">
+    <label for="nom">Nom</label>
+    <input type="text" formControlName="nom">
+    <label for="prenom">Prénom</label>
+    <input type="text" formControlName="prenom">
+    
+    
+    <input type="submit" [disabled]="!clientForm.valid" (click)="updateClient()" value="Envoyer">
+
+</form>
+</div>

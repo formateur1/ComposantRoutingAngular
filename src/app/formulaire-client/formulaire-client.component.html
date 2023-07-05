@@ -1,0 +1,16 @@
+<form [formGroup]="clientForm">
+    <label for="id">Id</label>
+    <input type="text" formControlName="id">
+    <label for="nom">Nom</label>
+    <input type="text" formControlName="nom">
+    <label for="prenom">Prénom</label>
+    <input type="text" formControlName="prenom">
+    
+    <div *ngIf="clientObs$ | async as client; else faux">
+        <input type="submit" [disabled]="!clientForm.valid" (click)="saveClient(client)" value="Envoyer">
+    </div>
+    <ng-template #faux>
+        <input type="submit" value="Client Non Valide">
+    </ng-template>
+    
+</form>
